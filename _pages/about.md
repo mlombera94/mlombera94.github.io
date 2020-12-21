@@ -4,10 +4,5 @@ title: "About"
 author_profile: true
 ---
 
-Placeholder
+Placeholder 1.1
 
-{% for post in site.pages %}
-  {% unless post.hidden %}
-    {% include archive-single.html %}
-  {% endunless %}
-{% endfor %}
