@@ -1,9 +1,9 @@
 # main links
 main:
-  - title: "About"
-    url: /_pages/about/
   - title: "Posts"
     url: /year-archive/
+  - title: "About"
+    url: /_pages/about/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
