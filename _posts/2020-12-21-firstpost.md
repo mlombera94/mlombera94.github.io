@@ -16,6 +16,9 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 ```
 
+You can also create badges with links on where to find project/posts.
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/mlombera94/mlombera94.github.io/tree/master/_posts)
+
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
 [jekyll-docs]: http://jekyllrb.com/docs/home
