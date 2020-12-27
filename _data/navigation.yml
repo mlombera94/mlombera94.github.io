@@ -3,7 +3,7 @@ main:
   - title: "Posts"
     url: /year-archive/
   - title: "Tags"
-    url: /_pages/tags/
+    url: /tags/
   - title: "About"
     url: /_pages/about/
   # - title: "Sample Collections"
