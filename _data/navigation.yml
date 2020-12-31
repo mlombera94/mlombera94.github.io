@@ -4,6 +4,8 @@ main:
     url: /year-archive/
   - title: "Tags"
     url: /tags/
+  - title: "Projects"
+    url: /projects/
   - title: "About"
     url: /_pages/about/
   # - title: "Sample Collections"
