@@ -1,4 +1,4 @@
 ---
-permalink: /projects
+permalink: /_pages/projects
 title: "Projects"
 ---
