@@ -5,7 +5,7 @@ main:
   - title: "Tags"
     url: /tags/
   - title: "Projects"
-    url: /projects/
+    url: /_pages/projects/
   - title: "About"
     url: /_pages/about/
   # - title: "Sample Collections"
