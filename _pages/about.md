@@ -7,7 +7,7 @@ header:
 
 My name is Maurisio Lombera. I graduated from CSU East Bay in 2016 with an [M.S. in Statistics](https://catalog.csueastbay.edu/preview_program.php?catoid=24&poid=9974) and a concentration in Data Science. Prior to completing my masters, I graduated from UC Santa Cruz in 2012 with a [B.S. in Mathematics & Economics](https://economics.ucsc.edu/academics/undergraduate-program/majors-minor/econ-math.html) as a combined major.
 
-Currently, I work at Tesla as a Data Annotation Specialist working with raw video data used to train neural networks used in the [Autopilot Program](https://www.tesla.com/autopilot). 
+Currently, I work at Tesla as a Data Annotation Specialist working with raw video data used to train neural networks for the [Autopilot Program](https://www.tesla.com/autopilot). 
 
 Before joining the Autopilot team at Tesla, I had the opportunity to work at [Gilead Sciences](https://www.gilead.com) as a Data Analyst Intern in the IT R&D Department. There, I collaborated across various departments to asses Gilead's forecasting capabilities. Using machine learning techniques and time series analysis, I demonstrated how Gilead could cut costs for example via permanent reduction at batch level and streamlined production as result of improved demand forecasting. 
 
