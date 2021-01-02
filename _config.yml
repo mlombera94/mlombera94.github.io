@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "dirt" #"default" # "air", "aqua", "contrast", "dark"
 locale                   : "en-US"
 title                    : "Through Data Lens"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : "Data Science Blog" # A short tagline that appears below the title in site masthead.
 name                     : "Maurisio Lombera"
 description              : "Avid soccer player, Coco's personal chauffeur, and aspiring data scientist."
 url                      : "https://mlombera94.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -293,4 +293,3 @@ defaults:
     values:
       layout: single
       author_profile: true
-     
