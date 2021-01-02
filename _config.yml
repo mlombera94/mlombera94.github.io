@@ -20,7 +20,7 @@ title                    : "Through Data Lens"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Maurisio Lombera"
-description              : "Data Science Blog"
+description              : "Avid soccer player, Coco's chauffeur, and aspiring data scientist."
 url                      : "https://mlombera94.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/mlombera94.github.io" # the subpath of your site, e.g. "/blog"
 repository               : "mlombera94/mlombera94.github.io"
