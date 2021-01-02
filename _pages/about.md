@@ -13,6 +13,6 @@ Before joining the Autopilot team at Tesla, I had the opportunity to work at [Gi
 
 Following the internship at Gilead, I was onboarded as a contract worker on the IT Solutions Development Department as a full time Data Analyst to continue working on and finish the project I began during the internship. During my tenure at Gilead, I managed and lead a project focused on analyzing the benefits of integrating statistics into demand planning and supply chain processes. This involved working with Gilead's entire historical demand data for all their products, using machine learning techniques to train and test various time series models, creating dashboards and data visualization to quickly capture differences between robust statistical models vs. non-statistical models, and creating a framework to integrate statistical analysis and machine learning concepts within the demand planning/supply chain departments. 
 
-During my spare time, I enjoy playing soccer, training in kickboxing, and going on hikes with my dog. If you would like to learn more about my work background, please visit my [Linkedin](https://www.linkedin.com/in/maulombera/). Look forward to connecting!
+During my spare time, I enjoy playing soccer, training in kickboxing, and going on hikes with my dog Coco. If you would like to learn more about my work background, please visit my [Linkedin](https://www.linkedin.com/in/maulombera/). Look forward to connecting!
 
 
