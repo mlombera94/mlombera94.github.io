@@ -9,7 +9,7 @@ toc_sticky: true
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/mlombera94/forecast_R-shiny) [![View on shinyapps.io](https://img.shields.io/badge/shinyapps.io-View_on_shinyapps.io-276DC3?logo=R)](https://mlombera.shinyapps.io/forecast_r-shiny/)
 
  **Summary:**
-This R shiny application was developed to allows users to forecast monthly demand of products by applying various time series models and comparing the performance of each model. There are four main functions of this application including:
+This R-shiny application was developed to allows users to forecast monthly demand of products by applying various time series models and comparing the performance of each model. There are four main functions of this application including:
 - Uploading raw demand data in a csv format and filtering data
 - Single SKU forecasts and visualization
 - Batch SKU forecasts
