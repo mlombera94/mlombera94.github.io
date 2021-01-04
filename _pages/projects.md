@@ -15,6 +15,6 @@ This R-shiny application was developed to allows users to forecast monthly deman
 - Batch SKU forecasts
 - Statistical analysis/visualization
 
-To view more information about the application, visit the github page and if you're interested in testing the application, visit the shinyapp.io page where the application is hosted. 
+To view more information about the application, visit the [github page](https://github.com/mlombera94/forecast_R-shiny) and if you're interested in testing the application for yourself, visit the [shinyapp.io page](https://mlombera.shinyapps.io/forecast_r-shiny/) where the application is hosted. 
 
 ![gif2](https://user-images.githubusercontent.com/20471627/66339136-5872de80-e8f7-11e9-9f05-650156aff007.gif)
