@@ -27,8 +27,8 @@ The following project explores the efficacy of Naive Bayes algorithm for classif
  
 This project provides a great opportunity to work with a simple yet effective machine learning model as well as the opportunity to work with textual data scraped from Twitter. 
 
-![](mlombera94/airline_sentiment/NB_Classification_Binary__Pos,_Neg__files/figure-markdown_github/unnamed-chunk-5-4.png)
+![](mlombera94.github.io/images/project/naive_bayes/unnamed-chunk-5-4.png)
 
-![](mlombera94/airline_sentiment/NB_Classification_Binary__Pos,_Neg__files/figure-markdown_github/unnamed-chunk-12-2.png) ![](NB_Classification_Binary__Pos,_Neg__files/figure-markdown_github/unnamed-chunk-12-1.png)
+![](mlombera94.github.io/images/project/naive_bayes//unnamed-chunk-12-2.png) ![](mlombera94.github.io/images/project/naive_bayes//unnamed-chunk-12-1.png)
 
-![](mlombera94/airline_sentiment/NB_Classification_Binary__Pos,_Neg__files/figure-markdown_github/unnamed-chunk-18-1.png)
+![](mlombera94.github.io/images/project/naive_bayes//unnamed-chunk-18-1.png)
