@@ -1,28 +1,11 @@
 ---
-title:  "Welcome to Jekyll!"
+title:  "New Journey"
 tags: 
-  - Jekyll
+  - Data Science
+  - Career
+  
 ---
 
-You'll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+With the new year just around the corner, I decided to embark on a new journey to explore the world of data science and share my thoughts on the field. Along with discussing the latest in data science, this blog will also serve as a way to share previous projects and resources for those interested in learning more about data science. Follow me as we all continue to move forward from what has been a rough year for many and look to the future through a different set of lens, dare I say, data lens.   
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
-Jekyll also offers powerful support for code snippets:
-
-```ruby
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-```
-
-You can also create badges with links on where to find project/posts.
-[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/mlombera94/mlombera94.github.io/tree/master/_posts)
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
