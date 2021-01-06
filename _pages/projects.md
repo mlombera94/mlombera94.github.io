@@ -5,19 +5,19 @@ toc: true
 toc_sticky: true
 gallery: 
   - url: /images/project/naive_bayes/unnamed-chunk-5-4.png 
-    image_path: /images/project/naive_bayes/unnamed-chunk-5-4-th.png
+    image_path: /images/project/naive_bayes/unnamed-chunk-5-4.png
     alt: "placeholder image 1"
     title: "Frequency of each classified tweet per Airline"
   - url: /images/project/naive_bayes//unnamed-chunk-12-1.png 
-    image_path: /images/project/naive_bayes//unnamed-chunk-12-1-th.png
+    image_path: /images/project/naive_bayes/unnamed-chunk-12-1.png
     alt: "placeholder image 2"
-    title: "Word Cloud Visualization of Positve Tweets"
+    title: "Word Cloud Visualization of Positive Tweets"
   - url: /images/project/naive_bayes//unnamed-chunk-12-2.png 
-    image_path: /images/project/naive_bayes//unnamed-chunk-12-2-th.png
+    image_path: /images/project/naive_bayes/unnamed-chunk-12-2.png
     alt: "placeholder image 3"
     title: "Word Cloud Visualization of Negative Tweets"
   - url: /images/project/naive_bayes//unnamed-chunk-18-1.png 
-    image_path: /images/project/naive_bayes//unnamed-chunk-18-1-th.png
+    image_path: /images/project/naive_bayes/unnamed-chunk-18-1.png
     alt: "placeholder image 4"
     title: "Confusion Matrix (91.61% classified correctly)"
 ---
