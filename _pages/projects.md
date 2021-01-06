@@ -3,6 +3,23 @@ title: Projects
 permalink: _pages/projects/
 toc: true
 toc_sticky: true
+gallery: 
+  - url: /images/project/naive_bayes/unnamed-chunk-5-4.png 
+    image_path: /images/project/naive_bayes/unnamed-chunk-5-4-th.png
+    alt: "placeholder image 1"
+    title: "Frequency of each classified tweet per Airline"
+  - url: /images/project/naive_bayes//unnamed-chunk-12-1.png 
+    image_path: /images/project/naive_bayes//unnamed-chunk-12-1-th.png
+    alt: "placeholder image 2"
+    title: "Word Cloud Visualization of Positve Tweets"
+  - url: /images/project/naive_bayes//unnamed-chunk-12-2.png 
+    image_path: /images/project/naive_bayes//unnamed-chunk-12-2-th.png
+    alt: "placeholder image 3"
+    title: "Word Cloud Visualization of Negative Tweets"
+  - url: /images/project/naive_bayes//unnamed-chunk-18-1.png 
+    image_path: /images/project/naive_bayes//unnamed-chunk-18-1-th.png
+    alt: "placeholder image 4"
+    title: "Confusion Matrix (91.61% classified correctly)"
 ---
 
 ## **Forecast Application with R-shiny**
@@ -27,8 +44,4 @@ The following project explores the efficacy of Naive Bayes algorithm for classif
  
 This project provides a great opportunity to work with a simple yet effective machine learning model as well as the opportunity to work with textual data scraped from Twitter. 
 
-![](/images/project/naive_bayes/unnamed-chunk-5-4.png)
-
-![](/images/project/naive_bayes//unnamed-chunk-12-2.png) ![](mlombera94.github.io/images/project/naive_bayes//unnamed-chunk-12-1.png)
-
-![](/images/project/naive_bayes//unnamed-chunk-18-1.png)
+{% include gallery caption="Naive Bayes Airline Tweet Sentiment Visualizations" %}
