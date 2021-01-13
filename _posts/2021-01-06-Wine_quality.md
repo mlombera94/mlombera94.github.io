@@ -8,42 +8,42 @@ tags:
   - Support Vector Machines
   - R
   - Wine
-  gallery1: 
+ gallery1: 
     - url: /images/project/wine_classification/unnamed-chunk-7-1.png 
       image_path: /images/project/wine_classification/unnamed-chunk-7-1.png
       alt: "placeholder image 1"
       title: "Quality Value Matrix Plot" 
-  gallery2: 
+ gallery2: 
     - url: /images/project/wine_classification/unnamed-chunk-8-1.png 
       image_path: /images/project/wine_classification/unnamed-chunk-8-1.png
       alt: "placeholder image 1"
       title: "Wine Quality Frequency Distribution Plot" 
-  gallery3: 
+ gallery3: 
     - url: /images/project/wine_classification/unnamed-chunk-16-1.png 
       image_path: /images/project/wine_classification/unnamed-chunk-16-1.png
       alt: "placeholder image 1"
       title: "Classification Accuracy Confusion Matrix Simple Linear SVM"  
-   gallery4: 
+ gallery4: 
     - url: /images/project/wine_classification/unnamed-chunk-19-1.png 
       image_path: /images/project/wine_classification/unnamed-chunk-19-1.png
       alt: "placeholder image 1"
       title: "Classification Accuracy Confusion Matrix RBF Kernel SVM"
-    gallery5: 
+ gallery5: 
     - url: /images/project/wine_classification/unnamed-chunk-23-1.png 
       image_path: /images/project/wine_classification/unnamed-chunk-23-1.png
       alt: "placeholder image 1"
       title: "Classification Accuracy Confusion Matrix Optimized RBF Kernel SVM"
-    gallery6: 
+ gallery6: 
     - url: /images/project/wine_classification/unnamed-chunk-25-1.png 
       image_path: /images/project/wine_classification/unnamed-chunk-25-1.png
       alt: "placeholder image 1"
       title: "Classification Accuracy Confusion Matrix Optimized Polynomial SVM"    
-    gallery7: 
+ gallery7: 
     - url: /images/project/wine_classification/unnamed-chunk-27-1.png 
       image_path: /images/project/wine_classification/unnamed-chunk-27-1.png
       alt: "placeholder image 1"
       title: "Classification Accuracy Confusion Matrix Optimized Sigmoid Kernel SVM"  
-    gallery8: 
+ gallery8: 
     - url: /images/project/wine_classification/unnamed-chunk-30-1.png 
       image_path: /images/project/wine_classification/unnamed-chunk-30-1.png
       alt: "placeholder image 1"
