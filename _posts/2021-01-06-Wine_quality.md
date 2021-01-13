@@ -18,8 +18,7 @@ Ever wondered what would happen if we combined machine learning and wine togethe
 
 ## Data: 
 The <a href="https://archive.ics.uci.edu/ml/datasets/Wine+Quality" target="_blank">Wine Dataset</a> includes 6,497 observations with 12 variables in total. 
-In order to train the models, the data is split into three datasets using random sampling methods: Training, Validation, and Testing. Because there are very few 
-observations regarding quality three and nine wines, they are removed from the dataset to avoid introducing unneccessary noise in the data. 
+In order to train the models, the data is split into three datasets using random sampling methods: Training, Validation, and Testing. 
 
 ## Step 1: Load Packages and Read in the Data
 Let's begin by the loading the necessary packages for this project. 
@@ -30,7 +29,7 @@ library(kernlab)
 library(e1071)
 library(caret)
 ```
-As a quick summary of each package, [ggplot2](https://ggplot2.tidyverse.or)]is used for data visualization) is a visualization tool, [tidyverse](http://vita.had.co.nz/papers/tidy-data.html) is a data cleaning tool, [kernlab](https://cran.r-project.org/web/packages/kernlab/kernlab.pdf) package contains multiple kernel based machine learning models including the support vector model used in this project, and the [caret](https://cran.r-project.org/web/packages/caret/caret.pdf) package contains miscellaneous functions for training and plotting classification and regression models.  
+As a quick summary of each package, [ggplot2](https://ggplot2.tidyverse.or) is used for visualization, [tidyverse](http://vita.had.co.nz/papers/tidy-data.html) is a data cleaning tool, [kernlab](https://cran.r-project.org/web/packages/kernlab/kernlab.pdf) package contains multiple kernel based machine learning models including the support vector model used in this project, and the [caret](https://cran.r-project.org/web/packages/caret/caret.pdf) package contains miscellaneous functions for training and plotting classification and regression models.  
 
 Next we read in the data
 ``` r
@@ -77,3 +76,41 @@ str(red_wine)
     ##  $ quality             : int  5 5 5 6 5 5 5 7 7 5 ...
 
 Combine both red and white wine datasets
+``` r
+wine_data <- rbind(white_wine, red_wine)
+```
+Summary of the data
+``` r
+summary(wine_data)
+```
+
+    ##  fixed.acidity    volatile.acidity  citric.acid     residual.sugar  
+    ##  Min.   : 3.800   Min.   :0.0800   Min.   :0.0000   Min.   : 0.600  
+    ##  1st Qu.: 6.400   1st Qu.:0.2300   1st Qu.:0.2500   1st Qu.: 1.800  
+    ##  Median : 7.000   Median :0.2900   Median :0.3100   Median : 3.000  
+    ##  Mean   : 7.215   Mean   :0.3397   Mean   :0.3186   Mean   : 5.443  
+    ##  3rd Qu.: 7.700   3rd Qu.:0.4000   3rd Qu.:0.3900   3rd Qu.: 8.100  
+    ##  Max.   :15.900   Max.   :1.5800   Max.   :1.6600   Max.   :65.800  
+    ##    chlorides       free.sulfur.dioxide total.sulfur.dioxide
+    ##  Min.   :0.00900   Min.   :  1.00      Min.   :  6.0       
+    ##  1st Qu.:0.03800   1st Qu.: 17.00      1st Qu.: 77.0       
+    ##  Median :0.04700   Median : 29.00      Median :118.0       
+    ##  Mean   :0.05603   Mean   : 30.53      Mean   :115.7       
+    ##  3rd Qu.:0.06500   3rd Qu.: 41.00      3rd Qu.:156.0       
+    ##  Max.   :0.61100   Max.   :289.00      Max.   :440.0       
+    ##     density             pH          sulphates         alcohol     
+    ##  Min.   :0.9871   Min.   :2.720   Min.   :0.2200   Min.   : 8.00  
+    ##  1st Qu.:0.9923   1st Qu.:3.110   1st Qu.:0.4300   1st Qu.: 9.50  
+    ##  Median :0.9949   Median :3.210   Median :0.5100   Median :10.30  
+    ##  Mean   :0.9947   Mean   :3.219   Mean   :0.5313   Mean   :10.49  
+    ##  3rd Qu.:0.9970   3rd Qu.:3.320   3rd Qu.:0.6000   3rd Qu.:11.30  
+    ##  Max.   :1.0390   Max.   :4.010   Max.   :2.0000   Max.   :14.90  
+    ##     quality     
+    ##  Min.   :3.000  
+    ##  1st Qu.:5.000  
+    ##  Median :6.000  
+    ##  Mean   :5.818  
+    ##  3rd Qu.:6.000  
+    ##  Max.   :9.000
+
+#### Check for NA values
