@@ -9,7 +9,6 @@ tags:
   - R
   - Wine
 ---
-
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/mlombera94/Wine-Classification)
 
 ## Summary: 
@@ -42,8 +41,8 @@ red_wine <- read.csv("winequality-red.csv", sep = ";")
 ``` r
 str(white_wine)
 ```
-
-    ## 'data.frame':    4898 obs. of  12 variables:
+ 
+    'data.frame':    4898 obs. of  12 variables:
     ##  $ fixed.acidity       : num  7 6.3 8.1 7.2 7.2 8.1 6.2 7 6.3 8.1 ...
     ##  $ volatile.acidity    : num  0.27 0.3 0.28 0.23 0.23 0.28 0.32 0.27 0.3 0.22 ...
     ##  $ citric.acid         : num  0.36 0.34 0.4 0.32 0.32 0.4 0.16 0.36 0.34 0.43 ...
