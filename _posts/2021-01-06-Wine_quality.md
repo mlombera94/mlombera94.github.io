@@ -1,5 +1,5 @@
 ---
-title: "Machine Learning with Wine Quality" 
+title: "Machine Learning and Wine" 
 toc: true
 toc_sticky: true
 tags: 
@@ -132,3 +132,4 @@ wine_data %>%
   scale_fill_brewer(palette = "Set3", 
                     name = "variables") 
 ```
+![](/images/project/wine_classification/unnamed-chunk-7-1.png)
