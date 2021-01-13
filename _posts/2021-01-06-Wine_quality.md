@@ -9,45 +9,45 @@ tags:
   - R
   - Wine
  gallery1: 
-    - url: /images/project/wine_classification/unnamed-chunk-7-1.png 
-      image_path: /images/project/wine_classification/unnamed-chunk-7-1.png
-      alt: "placeholder image 1"
-      title: "Quality Value Matrix Plot" 
+   - url: /images/project/wine_classification/unnamed-chunk-7-1.png 
+     image_path: /images/project/wine_classification/unnamed-chunk-7-1.png
+     alt: "placeholder image 1"
+     title: "Quality Value Matrix Plot" 
  gallery2: 
-    - url: /images/project/wine_classification/unnamed-chunk-8-1.png 
-      image_path: /images/project/wine_classification/unnamed-chunk-8-1.png
-      alt: "placeholder image 1"
-      title: "Wine Quality Frequency Distribution Plot" 
+   - url: /images/project/wine_classification/unnamed-chunk-8-1.png 
+     image_path: /images/project/wine_classification/unnamed-chunk-8-1.png
+     alt: "placeholder image 1"
+     title: "Wine Quality Frequency Distribution Plot" 
  gallery3: 
-    - url: /images/project/wine_classification/unnamed-chunk-16-1.png 
-      image_path: /images/project/wine_classification/unnamed-chunk-16-1.png
-      alt: "placeholder image 1"
-      title: "Classification Accuracy Confusion Matrix Simple Linear SVM"  
+   - url: /images/project/wine_classification/unnamed-chunk-16-1.png 
+     image_path: /images/project/wine_classification/unnamed-chunk-16-1.png
+     alt: "placeholder image 1"
+     title: "Classification Accuracy Confusion Matrix Simple Linear SVM"  
  gallery4: 
-    - url: /images/project/wine_classification/unnamed-chunk-19-1.png 
-      image_path: /images/project/wine_classification/unnamed-chunk-19-1.png
-      alt: "placeholder image 1"
-      title: "Classification Accuracy Confusion Matrix RBF Kernel SVM"
+   - url: /images/project/wine_classification/unnamed-chunk-19-1.png 
+     image_path: /images/project/wine_classification/unnamed-chunk-19-1.png
+     alt: "placeholder image 1"
+     title: "Classification Accuracy Confusion Matrix RBF Kernel SVM"
  gallery5: 
-    - url: /images/project/wine_classification/unnamed-chunk-23-1.png 
-      image_path: /images/project/wine_classification/unnamed-chunk-23-1.png
-      alt: "placeholder image 1"
-      title: "Classification Accuracy Confusion Matrix Optimized RBF Kernel SVM"
+   - url: /images/project/wine_classification/unnamed-chunk-23-1.png 
+     image_path: /images/project/wine_classification/unnamed-chunk-23-1.png
+     alt: "placeholder image 1"
+     title: "Classification Accuracy Confusion Matrix Optimized RBF Kernel SVM"
  gallery6: 
-    - url: /images/project/wine_classification/unnamed-chunk-25-1.png 
-      image_path: /images/project/wine_classification/unnamed-chunk-25-1.png
-      alt: "placeholder image 1"
-      title: "Classification Accuracy Confusion Matrix Optimized Polynomial SVM"    
+   - url: /images/project/wine_classification/unnamed-chunk-25-1.png 
+     image_path: /images/project/wine_classification/unnamed-chunk-25-1.png
+     alt: "placeholder image 1"
+     title: "Classification Accuracy Confusion Matrix Optimized Polynomial SVM"    
  gallery7: 
-    - url: /images/project/wine_classification/unnamed-chunk-27-1.png 
-      image_path: /images/project/wine_classification/unnamed-chunk-27-1.png
-      alt: "placeholder image 1"
-      title: "Classification Accuracy Confusion Matrix Optimized Sigmoid Kernel SVM"  
+   - url: /images/project/wine_classification/unnamed-chunk-27-1.png 
+     image_path: /images/project/wine_classification/unnamed-chunk-27-1.png
+     alt: "placeholder image 1"
+     title: "Classification Accuracy Confusion Matrix Optimized Sigmoid Kernel SVM"  
  gallery8: 
-    - url: /images/project/wine_classification/unnamed-chunk-30-1.png 
-      image_path: /images/project/wine_classification/unnamed-chunk-30-1.png
-      alt: "placeholder image 1"
-      title: "Classification Accuracy Confusion Matrix Optimized Sigmoid Kernel SVM"    
+   - url: /images/project/wine_classification/unnamed-chunk-30-1.png 
+     image_path: /images/project/wine_classification/unnamed-chunk-30-1.png
+     alt: "placeholder image 1"
+     title: "Final Classification Accuracy Confusion Matrix Optimized RBF Kernel SVM"    
 ---
 
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/mlombera94/Wine-Classification)
