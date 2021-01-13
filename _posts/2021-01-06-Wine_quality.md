@@ -19,8 +19,8 @@ gallery2:
     alt: "placeholder image 1"
     title: "Wine Quality Frequency Distribution Plot" 
 gallery3: 
-  - url: /images/project/wine_classification/unnamed-chunk-16-1.png 
-    image_path: /images/project/wine_classification/unnamed-chunk-16-1.png
+  - url: /images/project/wine_classification/unnamed-chunk-16-1-2.png 
+    image_path: /images/project/wine_classification/unnamed-chunk-16-1-2.png
     alt: "placeholder image 1"
     title: "Classification Accuracy Confusion Matrix Simple Linear SVM"  
 gallery4: 
@@ -189,7 +189,6 @@ Get the table counts for the number of observations for each quality of wine.
 ``` r
 wine_data$quality %>% table()
 
-    .
     3    4    5    6    7    8    9 
     30  216 2138 2836 1079  193    5
 ```
@@ -740,5 +739,3 @@ ggplot(data = confusion_matrix,
 
 ## Conclusion: 
 Upon examining the visualization of the confusion matrix, it is clear that model excelled only at classifying wines with a quality of 6 with an accuracy rate of 75.4% despite having removed quality three and nine wines. The model struggles to classify all other qualities of wine with all others having an accuracy rate below 63%. As mentioned before, this could be most likely due to the data being non-informative on top of the fact that most observations are quality six and seven wines.
-
-1.3
