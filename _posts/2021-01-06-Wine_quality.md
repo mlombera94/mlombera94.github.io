@@ -8,7 +8,7 @@ tags:
   - Support Vector Machines
   - R
   - Wine
- gallery1: 
+ gallery: 
    - url: /images/project/wine_classification/unnamed-chunk-7-1.png 
      image_path: /images/project/wine_classification/unnamed-chunk-7-1.png
      alt: "placeholder image 1"
@@ -174,7 +174,7 @@ wine_data %>%
   scale_fill_brewer(palette = "Set3", 
                     name = "variables") 
 ```
-{% include gallery id="gallery1" caption="Based on the above visualization of the data, there does not appear to be any variable that correlates with quality" %}
+{% include gallery caption="Based on the above visualization of the data, there does not appear to be any variable that correlates with quality" %}
 
 Visualize the data to see the distribution of the various wine qualities.
 ``` r
@@ -740,3 +740,5 @@ ggplot(data = confusion_matrix,
 
 ## Conclusion: 
 Upon examining the visualization of the confusion matrix, it is clear that model excelled only at classifying wines with a quality of 6 with an accuracy rate of 75.4% despite having removed quality three and nine wines. The model struggles to classify all other qualities of wine with all others having an accuracy rate below 63%. As mentioned before, this could be most likely due to the data being non-informative on top of the fact that most observations are quality six and seven wines.
+
+1.1
