@@ -23,6 +23,31 @@ tags:
       image_path: /images/project/wine_classification/unnamed-chunk-16-1.png
       alt: "placeholder image 1"
       title: "Classification Accuracy Confusion Matrix Simple Linear SVM"  
+   gallery4: 
+    - url: /images/project/wine_classification/unnamed-chunk-19-1.png 
+      image_path: /images/project/wine_classification/unnamed-chunk-19-1.png
+      alt: "placeholder image 1"
+      title: "Classification Accuracy Confusion Matrix RBF Kernel SVM"
+    gallery5: 
+    - url: /images/project/wine_classification/unnamed-chunk-23-1.png 
+      image_path: /images/project/wine_classification/unnamed-chunk-23-1.png
+      alt: "placeholder image 1"
+      title: "Classification Accuracy Confusion Matrix Optimized RBF Kernel SVM"
+    gallery6: 
+    - url: /images/project/wine_classification/unnamed-chunk-25-1.png 
+      image_path: /images/project/wine_classification/unnamed-chunk-25-1.png
+      alt: "placeholder image 1"
+      title: "Classification Accuracy Confusion Matrix Optimized Polynomial SVM"    
+    gallery7: 
+    - url: /images/project/wine_classification/unnamed-chunk-27-1.png 
+      image_path: /images/project/wine_classification/unnamed-chunk-27-1.png
+      alt: "placeholder image 1"
+      title: "Classification Accuracy Confusion Matrix Optimized Sigmoid Kernel SVM"  
+    gallery8: 
+    - url: /images/project/wine_classification/unnamed-chunk-30-1.png 
+      image_path: /images/project/wine_classification/unnamed-chunk-30-1.png
+      alt: "placeholder image 1"
+      title: "Classification Accuracy Confusion Matrix Optimized Sigmoid Kernel SVM"    
 ---
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/mlombera94/Wine-Classification)
 
@@ -43,9 +68,10 @@ library(kernlab)
 library(e1071)
 library(caret)
 ```
+
 As a quick summary of each package, [ggplot2](https://ggplot2.tidyverse.or) is used for visualization, [tidyverse](http://vita.had.co.nz/papers/tidy-data.html) is a data cleaning tool, [kernlab](https://cran.r-project.org/web/packages/kernlab/kernlab.pdf) package contains multiple kernel based machine learning models including the support vector model used in this project, and the [caret](https://cran.r-project.org/web/packages/caret/caret.pdf) package contains miscellaneous functions for training and plotting classification and regression models.  
 
-Next we read in the data
+Next we read in the data.
 ``` r
 white_wine <- read.csv("winequality-white.csv", sep = ";")
 
@@ -87,12 +113,12 @@ str(red_wine)
     $ quality             : int  5 5 5 6 5 5 5 7 7 5 ...
 ```
 
-Combine both red and white wine datasets
+Combine both red and white wine datasets.
 ``` r
 wine_data <- rbind(white_wine, red_wine)
 ```
 
-Summary of the data
+Summary of the data.
 ``` r
 summary(wine_data)
 
@@ -129,16 +155,15 @@ summary(wine_data)
     Max.   :9.000
 ```
 
-Check for NA values
+Check for NA values.
 ``` r
 anyNA(wine_data)
 
     [1] FALSE
 ```
-There are no missing values in the data
+There are no missing values in the data.
 
-
-Plot each variable against "quality" in a matrix to visualize the data
+Plot each variable against "quality" in a matrix to visualize the data.
 ``` r
 wine_data %>%
   gather(-quality, key = "variables", value = "value") %>%
@@ -150,8 +175,7 @@ wine_data %>%
 ```
 {% include gallery id="gallery1" caption="Based on the above visualization of the data, there does not appear to be any variable that correlates with quality" %}
 
-Visualize the data to see the distribution of the various wine qualities
-
+Visualize the data to see the distribution of the various wine qualities.
 ``` r
 wine_data$quality %>% table() %>% 
   as.data.frame() %>% 
@@ -160,8 +184,7 @@ wine_data$quality %>% table() %>%
 ```
 {% include gallery id="gallery2" caption="Based on the visualization above, the vast majority of wine qualities are labeled as 6 and 5" %}
 
-Get the table counts for the number of observations for each quality of wine
-
+Get the table counts for the number of observations for each quality of wine.
 ``` r
 wine_data$quality %>% table()
 
@@ -170,10 +193,9 @@ wine_data$quality %>% table()
     30  216 2138 2836 1079  193    5
 ```
 
-Based on the table above, wine qualities of three and nine only make up 0.54% of all the observations. Because of this, it may be better to filter out these observations as the model will not have sufficient data to train on in order to accurately classify them. Therefore, the project will focus on classifying wine qualities ranging from four to eight
+Based on the table above, wine qualities of three and nine only make up 0.54% of all the observations. Because of this, it may be better to filter out these observations as the model will not have sufficient data to train on in order to accurately classify them. Therefore, the project will focus on classifying wine qualities ranging from four to eight.
 
-Filter out any observations with wine qualities of three or nine
-
+Filter out any observations with wine qualities of three or nine.
 ``` r
 wine_data <- wine_data %>% 
   filter(quality > 3 & quality < 9)
@@ -185,7 +207,6 @@ unique(wine_data$quality)
 ```
 
 Support Vector Machines assume the data is within a standard range of 0 to 1. Therefore, SVMs require data to be normalized prior to training the model. The custom function below normalizes data
-
 ``` r
 # Function to normalize the data
 normalize <- function(x) {
@@ -220,8 +241,7 @@ unique(wine_data_norm$quality)
     [1] 0.50 0.25 0.75 1.00 0.00
 ```
 
-Split the data into training, validation, and test datasets using random sampling 
-
+Split the data into training, validation, and test datasets using random sampling. 
 ``` r
 # Set seed for duplication purposes
 set.seed(123)
@@ -244,8 +264,7 @@ test_norm <- wine_data_norm[ss==3,]
 
 ## Step 3: Train the SVM model
 
-Start with a simple linear SVM (Support Vector Model) 
-
+Start with a simple linear SVM (Support Vector Model). 
 ``` r
 # Begin training with a simple linear SVM
 quality_classifier <- ksvm(quality ~., 
@@ -270,7 +289,6 @@ print(quality_classifier)
 ```
 
 In order to convert the normalized quality values back to it's original scale (1-10), it will be useful to create a function that can be called to convert each predicted value to back to its respected quality value. 
-
 ``` r
 round_predictions <- function(x) {
   if(x >= 0 & x <= 0.125) {
@@ -291,8 +309,7 @@ round_predictions <- function(x) {
 }
 ```
 
-Using the trained simple linear SVM model, apply the model to the normalized validation dataset to check the accuracy of the model
-
+Using the trained simple linear SVM model, apply the model to the normalized validation dataset to check the accuracy of the model.
 ``` r
 # Normalized validation set predictions
 pred_validation <- predict(quality_classifier, validation_norm)
@@ -305,10 +322,10 @@ mean(pred_validation == validation$quality)
 
     [1] 0.5399061
 ```
-The simple linear SVM results in 54% accuracy
 
-Create a confusion matrix to visualize the classification accuracy
+The simple linear SVM results in 54% accuracy.
 
+Create a confusion matrix to visualize the classification accuracy.
 ``` r
 validation_results <- data.frame(cbind(validation$quality, pred_validation))
 
@@ -340,8 +357,7 @@ ggplot(data = confusion_matrix,
 
 ## Step 4: Improve upon the model by implementing different kernels and fine-tuning the parameters
 
-Because the data consists of multiple variables, a simple linear SVM may not result in the most accurate model. To try and improve the model, an RBF kernel with default parameters can be attempted next
-
+Because the data consists of multiple variables, a simple linear SVM may not result in the most accurate model. To try and improve the model, an RBF kernel with default parameters can be attempted next.
 ``` r
 # RBF kernel SVM with default parameters 
 RBF_classifier <- svm(quality ~ ., 
@@ -365,8 +381,8 @@ print(RBF_classifier)
  
      Number of Support Vectors:  3329
 ```
-#### Apply the SVM model to the normalized validation dataset to check the accuracy of the model
 
+Apply the SVM model to the normalized validation dataset to check the accuracy of the model.
 ``` r
 # Normalized validation dataset predictions
 pred_validation <- predict(RBF_classifier, validation_norm)
@@ -376,14 +392,12 @@ pred_validation <- sapply(pred_validation, round_predictions)
 
 # Accuracy of the model 
 mean(pred_validation == validation$quality)
+
+     [1] 0.5821596
 ```
+The RBF SVM model with default parameters results in 58.2% accuracy, an increase of 4.2% from the simple linear SVM.
 
-    ## [1] 0.5821596
-
-#### The RBF SVM model with default parameters results in 58.2% accuracy, an increase of 4.2% from the simple linear SVM
-
-#### Create a confusion matrix to visualize the classification accuracy
-
+Create a confusion matrix to visualize the classification accuracy.
 ``` r
 validation_results <- data.frame(cbind(validation$quality, pred_validation))
 
@@ -411,11 +425,9 @@ ggplot(data = confusion_matrix,
                       high = "#003767",
                       trans = "log")
 ```
+{% include gallery id="gallery4" caption="The RBF SVM model with default parameters results in 58.2% accuracy, an increase of 4.2% from the simple linear SVM" %}
 
-![](SVM_algorithm_files/figure-markdown_github/unnamed-chunk-19-1.png)
-
-#### Find the optimal parameters of the RBF kernel to tune the model by using the tune.svm function
-
+Lets try to tune and improve upon the RBF Kernel model by searching for the optimal parameters by using the tune.svm function.
 ``` r
 # Obtain the column number of the quality variable
 typeColNum <- grep("quality", names(wine_data))
@@ -430,24 +442,19 @@ RBF_tune <- tune.svm(x = train_norm[, -typeColNum],
 
 # Print out the parameters of cost and gamma from the updated algorithm 
 RBF_tune$best.parameters$gamma
-```
 
-    ## [1] 1
+     [1] 1
 
-``` r
 RBF_tune$best.parameters$cost
-```
 
-    ## [1] 2
+     [1] 2
 
-``` r
 RBF_tune$best.parameters$epsilon
+
+     [1] 0.2
 ```
 
-    ## [1] 0.2
-
-#### Using the updated parameters for cost and gamma obtained from the tune.svm function, train the SVM model on the train dataset
-
+Using the updated parameters for cost and gamma obtained from the tune.svm function, train the SVM model on the train dataset.
 ``` r
 tuned_RBF_classifier <- svm(quality ~ ., 
                             data = train_norm, 
@@ -458,8 +465,7 @@ tuned_RBF_classifier <- svm(quality ~ .,
                             epsilon = RBF_tune$best.parameters$epsilon)
 ```
 
-#### Apply the SVM model to the validation dataset to check the accuracy of the model
-
+Apply the SVM model to the validation dataset to check the accuracy of the model
 ``` r
 # Validation dataset predictions
 pred_validation <- predict(tuned_RBF_classifier, validation_norm)
@@ -469,14 +475,13 @@ pred_validation <- sapply(pred_validation, round_predictions)
 
 # Accuracy of the model 
 mean(pred_validation == validation$quality)
+
+     [1] 0.6353678
 ```
 
-    ## [1] 0.6353678
+The RBF SVM model with optimized parameters results in 61.2% accuracy, an increase of 3% from the default RBF SVM model.
 
-#### The RBF SVM model with optimized parameters results in 61.2% accuracy, an increase of 3% from the default RBF SVM model
-
-#### Create a confusion matrix to visualize the classification accuracy
-
+Create a confusion matrix to visualize the classification accuracy.
 ``` r
 validation_results <- data.frame(cbind(validation$quality, pred_validation))
 
@@ -504,11 +509,9 @@ ggplot(data = confusion_matrix,
                       high = "#003767",
                       trans = "log")
 ```
+{% include gallery id="gallery5" caption="The RBF SVM model with optimized parameters results in 61.2% accuracy, an increase of 3% from the default RBF SVM model" %}
 
-![](SVM_algorithm_files/figure-markdown_github/unnamed-chunk-23-1.png)
-
-#### Build an SVM model using the polynomial kernel and optimize the parameters using the tune.svm function. It is best to only optimize three parameters at once as increasing the parameters may result in long or an indefinite run times. Once a few parameters have been optimized, attempt to optimize the rest
-
+Let's experiment with a different variation of the SVM model by using the polynomial kernel and optimizing the parameters using the tune.svm function. It is best to only optimize three parameters at once as increasing the parameters may result in extended or indefinite run times. Once a few parameters have been optimized, attempt to optimize the rest.
 ``` r
 # Obtain the best parameters for polynomial type kernel for the SVM model
 polynomial_tune <- tune.svm(x = train_norm[, -typeColNum],
@@ -539,14 +542,13 @@ pred_validation <- sapply(pred_validation, round_predictions)
 
 # Accuracy of the model 
 mean(pred_validation == validation$quality)
-```
 
     ## [1] 0.556338
+```
 
-#### The polynomial SVM model with optimized parameters results in 55.6% accuracy, a decrease of 4.6% from the optimized RBF SVM model
+The polynomial SVM model with optimized parameters results in 55.6% accuracy, a decrease of 4.6% from the optimized RBF SVM model.
 
-#### Create a confusion matrix to visualize the classification accuracy
-
+Create a confusion matrix to visualize the classification accuracy.
 ``` r
 validation_results <- data.frame(cbind(validation$quality, pred_validation))
 
@@ -574,11 +576,9 @@ ggplot(data = confusion_matrix,
                       high = "#003767",
                       trans = "log")
 ```
+{% include gallery id="gallery6" caption="The polynomial SVM model with optimized parameters results in 55.6% accuracy, a decrease of 4.6% from the optimized RBF SVM model" %}
 
-![](SVM_algorithm_files/figure-markdown_github/unnamed-chunk-25-1.png)
-
-#### Try the SVM algorithm with the sigmoid kernel and fine tune the parameters
-
+To experiment further with one last SVM model, Sigmoid Kernel SVM, and fine tune the parameters.
 ``` r
 # Obtain the best parameters for polynomial type kernel for the SVM model
 sigmoid_tune <- tune.svm(x = train_norm[, -typeColNum],
@@ -607,14 +607,13 @@ pred_validation <- sapply(pred_validation, round_predictions)
 
 # Accuracy of the model 
 mean(pred_validation == validation$quality)
+
+     [1] 0.456964
 ```
 
-    ## [1] 0.456964
+The sigmoid SVM model with optimized parameters results in 45.7% accuracy, a substantial decrease of 15.5% from the optimized RBF SVM model.
 
-#### The sigmoid SVM model with optimized parameters results in 45.7% accuracy, a substantial decrease of 15.5% from the optimized RBF SVM model
-
-#### Create a confusion matrix to visualize the classification accuracy
-
+Create a confusion matrix to visualize the classification accuracy.
 ``` r
 validation_results <- data.frame(cbind(validation$quality, pred_validation))
 
@@ -642,16 +641,13 @@ ggplot(data = confusion_matrix,
                       high = "#003767",
                       trans = "log")
 ```
+{% include gallery id="gallery7" caption="The sigmoid SVM model with optimized parameters results in 45.7% accuracy, a substantial decrease of 15.5% from the optimized RBF SVM model" %}
 
-![](SVM_algorithm_files/figure-markdown_github/unnamed-chunk-27-1.png)
+Out of the three optimized models, the optimized RBF model resulted in the highest accuracy at 61.2%. However, with the accuracy maxing out just above 60%, it is clear that neither of the SVM models are the best classification method for this project or the data is simply too "noisy" and "non-informative". This can be seen in the data visualization that plots each feature (variable) against quality. None of the features show any clear correlation regarding quality. In this case, either more or different features should be used to classify wine quality.
 
-#### Out of the three optimized models, the optimized RBF model resulted in the highest accuracy at 61.2%. However, with the accuracy maxing out just above 60%, it is clear that either SVM models aren't the best classification method for this project or the data is simply too "noisy" and "non-informative". This can be seen in the data visualization that plots each feature (variable) against quality. None of the features show any clear correlation regarding quality. In this case, either more or different features should be used to classify wine quality
+## Step 5: Apply the best performing model to the test dataset
 
-Step 5: Apply the best performing model to the test dataset
-===========================================================
-
-#### Using the optimized parameters for cost, gamma, and epsilon obtained from the tune.svm function, apply the model to the test dataset
-
+Using the optimized parameters for cost, gamma, and epsilon obtained from the tune.svm function, apply the model to the test dataset.
 ``` r
 # Testdataset predictions
 pred_test <- predict(tuned_RBF_classifier, test_norm)
@@ -661,14 +657,13 @@ pred_test <- sapply(pred_test, round_predictions)
 
 # Accuracy of the model 
 mean(pred_test == test$quality)
+
+     [1] 0.6109375
 ```
 
-    ## [1] 0.6109375
+The final result is 61.1% accuracy
 
-#### The final result is 60.4% accuracy
-
-#### Create a confusion matrix with statistics
-
+Create a confusion matrix with statistics
 ``` r
 test_results <- data.frame(cbind(test$quality, pred_test))
 
@@ -679,51 +674,51 @@ test_results$actual_quality <- factor(test_results$actual_quality, levels = c("4
 test_results$predicted_quality <- factor(test_results$predicted_quality, levels = c("4", "5", "6", "7", "8"))
 
 str(test_results)
-```
 
-    ## 'data.frame':    1280 obs. of  2 variables:
-    ##  $ actual_quality   : Factor w/ 5 levels "4","5","6","7",..: 3 2 4 5 3 3 3 3 2 4 ...
-    ##  $ predicted_quality: Factor w/ 5 levels "4","5","6","7",..: 3 3 3 4 2 3 3 3 2 3 ...
+     'data.frame':    1280 obs. of  2 variables:
+      $ actual_quality   : Factor w/ 5 levels "4","5","6","7",..: 3 2 4 5 3 3 3 3 2 4 ...
+      $ predicted_quality: Factor w/ 5 levels "4","5","6","7",..: 3 3 3 4 2 3 3 3 2 3 ...
+``` 
 
+Let's create a confusion Matrix and compare actualy quality vs predicted quality. 
 ``` r
 confusionMatrix(test_results$actual_quality, test_results$predicted_quality)
+
+     Confusion Matrix and Statistics
+     
+               Reference
+     Prediction   4   5   6   7   8
+              4   3  20  26   0   0
+              5   0 229 194   5   0
+              6   0  80 437  27   0
+              7   0   5 108 106   1
+              8   0   0  20  12   7
+     
+    Overall Statistics
+                                               
+                    Accuracy : 0.6109          
+                      95% CI : (0.5836, 0.6378)
+         No Information Rate : 0.6133          
+         P-Value [Acc > NIR] : 0.5804          
+                                               
+                       Kappa : 0.3841          
+                                               
+      Mcnemar's Test P-Value : NA              
+    
+     Statistics by Class:
+     
+                          Class: 4 Class: 5 Class: 6 Class: 7 Class: 8
+     Sensitivity          1.000000   0.6856   0.5567  0.70667 0.875000
+     Specificity          0.963978   0.7896   0.7838  0.89912 0.974843
+     Pos Pred Value       0.061224   0.5350   0.8033  0.48182 0.179487
+     Neg Pred Value       1.000000   0.8768   0.5272  0.95849 0.999194
+     Prevalence           0.002344   0.2609   0.6133  0.11719 0.006250
+     Detection Rate       0.002344   0.1789   0.3414  0.08281 0.005469
+     Detection Prevalence 0.038281   0.3344   0.4250  0.17188 0.030469
+     Balanced Accuracy    0.981989   0.7376   0.6703  0.80289 0.924921
 ```
 
-    ## Confusion Matrix and Statistics
-    ## 
-    ##           Reference
-    ## Prediction   4   5   6   7   8
-    ##          4   3  20  26   0   0
-    ##          5   0 229 194   5   0
-    ##          6   0  80 437  27   0
-    ##          7   0   5 108 106   1
-    ##          8   0   0  20  12   7
-    ## 
-    ## Overall Statistics
-    ##                                           
-    ##                Accuracy : 0.6109          
-    ##                  95% CI : (0.5836, 0.6378)
-    ##     No Information Rate : 0.6133          
-    ##     P-Value [Acc > NIR] : 0.5804          
-    ##                                           
-    ##                   Kappa : 0.3841          
-    ##                                           
-    ##  Mcnemar's Test P-Value : NA              
-    ## 
-    ## Statistics by Class:
-    ## 
-    ##                      Class: 4 Class: 5 Class: 6 Class: 7 Class: 8
-    ## Sensitivity          1.000000   0.6856   0.5567  0.70667 0.875000
-    ## Specificity          0.963978   0.7896   0.7838  0.89912 0.974843
-    ## Pos Pred Value       0.061224   0.5350   0.8033  0.48182 0.179487
-    ## Neg Pred Value       1.000000   0.8768   0.5272  0.95849 0.999194
-    ## Prevalence           0.002344   0.2609   0.6133  0.11719 0.006250
-    ## Detection Rate       0.002344   0.1789   0.3414  0.08281 0.005469
-    ## Detection Prevalence 0.038281   0.3344   0.4250  0.17188 0.030469
-    ## Balanced Accuracy    0.981989   0.7376   0.6703  0.80289 0.924921
-
-#### Create a confusion matrix to visualize the classification accuracy
-
+Create a confusion matrix to visualize the classification accuracy.
 ``` r
 confusion_matrix <- as.data.frame(table(test_results$actual_quality, test_results$predicted_quality))
 
@@ -740,7 +735,7 @@ ggplot(data = confusion_matrix,
                       high = "#003767",
                       trans = "log")
 ```
+{% include gallery id="gallery8" caption="The final result is 61.1% accuracy" %}
 
-![](SVM_algorithm_files/figure-markdown_github/unnamed-chunk-30-1.png)
-
-#### Upon examining the visualization of the confusion matrix, it is clear that model excelled only at classifying wines with a quality of 6 with an accuracy rate of 75.4% despite having removed quality three and nine wines. The model struggles to classify all other qualities of wine with all others having an accuracy rate below 63%. As mentioned before, this could be most likely due to the data being non-informative on top of the fact that most observations are quality six and seven wines
+## Conclusion: 
+Upon examining the visualization of the confusion matrix, it is clear that model excelled only at classifying wines with a quality of 6 with an accuracy rate of 75.4% despite having removed quality three and nine wines. The model struggles to classify all other qualities of wine with all others having an accuracy rate below 63%. As mentioned before, this could be most likely due to the data being non-informative on top of the fact that most observations are quality six and seven wines.
