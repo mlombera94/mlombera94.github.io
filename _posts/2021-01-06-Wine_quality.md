@@ -49,6 +49,7 @@ tags:
       alt: "placeholder image 1"
       title: "Classification Accuracy Confusion Matrix Optimized Sigmoid Kernel SVM"    
 ---
+
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/mlombera94/Wine-Classification)
 
 ## Summary: 
