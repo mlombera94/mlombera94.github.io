@@ -113,4 +113,22 @@ summary(wine_data)
     ##  3rd Qu.:6.000  
     ##  Max.   :9.000
 
-#### Check for NA values
+Check for NA values
+``` r
+anyNA(wine_data)
+```
+
+    ## [1] FALSE
+
+There are no missing values in the data
+
+Plot each variable against "quality" in a matrix to visualize the data
+``` r
+wine_data %>%
+  gather(-quality, key = "variables", value = "value") %>%
+  ggplot(aes(x = value, y = quality, color = variables)) +
+  geom_point(alpha = 1/4) +
+  facet_wrap(~ variables, scales = "free") + 
+  scale_fill_brewer(palette = "Set3", 
+                    name = "variables") 
+```
