@@ -8,6 +8,8 @@ main:
     url: /tags/
   - title: "About"
     url: /_pages/about/
+  - title: "Coursework"
+    url: /_pages/coursework/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
