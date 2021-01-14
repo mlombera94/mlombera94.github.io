@@ -54,11 +54,10 @@ gallery8:
 
 ## Summary: 
 
-Ever wondered what would happen if we combined machine learning and wine together? In this fun little project, we attempt to use support vector machines using R to classify the quality of various red and white Portuguese "Vinho Verde" wines on a scale of 1-10 (1 being the worst to 10 being the best) using only the physicochemical properties of the wines. The full project involved using both support vector machines and neural networks and can be found by clicking on the github badge above. However, for the purposes of this post, we will focus primarily on how to deploy support vector machines. 
+Ever wondered what would happen if we combined machine learning and wine together? In this fun little project, we attempt to use support vector machines using R to classify the quality of various red and white Portuguese "Vinho Verde" wines on a scale of 1-10 (1 being the worst to 10 being the best) using only the physiochemical properties of the wines. The full project involved using both support vector machines and neural networks to compare the differences in performance. To view more the project in it's entirety, click on the github badge above. However, for the purposes of this post, we will focus primarily on how to deploy support vector machines. 
 
 ## Data: 
-The <a href="https://archive.ics.uci.edu/ml/datasets/Wine+Quality" target="_blank">Wine Dataset</a> includes 6,497 observations with 12 variables in total. 
-In order to train the models, the data is split into three datasets using random sampling methods: Training, Validation, and Testing. 
+The <a href="https://archive.ics.uci.edu/ml/datasets/Wine+Quality" target="_blank">Wine Dataset</a> can be found on the UCI Machine Learning Repository and includes 6,497 observations with 12 variables in total. In order to train the models, the data is split into three datasets using random sampling methods: Training, Validation, and Testing. 
 
 ## Step 1: Load Packages and Read in the Data
 Let's begin by the loading the necessary packages for this project. 
@@ -72,7 +71,7 @@ library(caret)
 
 As a quick summary of each package, [ggplot2](https://ggplot2.tidyverse.or) is used for visualization, [tidyverse](http://vita.had.co.nz/papers/tidy-data.html) is a data cleaning tool, [kernlab](https://cran.r-project.org/web/packages/kernlab/kernlab.pdf) package contains multiple kernel based machine learning models including the support vector model used in this project, and the [caret](https://cran.r-project.org/web/packages/caret/caret.pdf) package contains miscellaneous functions for training and plotting classification and regression models.  
 
-Next we read in the data.
+Next, we read in the data.
 ``` r
 white_wine <- read.csv("winequality-white.csv", sep = ";")
 
@@ -80,6 +79,9 @@ red_wine <- read.csv("winequality-red.csv", sep = ";")
 ```
 
 ## Step 2: Inspect the data
+In order to gain a better understanding of the data we are working with, it is important to explore the data. What type of data are we working with? Are there any missing values? How many observations are we working with? These questions provide a starting point when beginning a machine learning project. 
+
+The `str` function provides a quick and easy way to get a sense of the data. 
 ``` r
 str(white_wine)
  
@@ -119,7 +121,7 @@ Combine both red and white wine datasets.
 wine_data <- rbind(white_wine, red_wine)
 ```
 
-Summary of the data.
+The `summary` function also provides quick insight into numerical data. 
 ``` r
 summary(wine_data)
 
@@ -156,7 +158,7 @@ summary(wine_data)
     Max.   :9.000
 ```
 
-Check for NA values.
+Check for NA values using the `anyNA` function.
 ``` r
 anyNA(wine_data)
 
@@ -164,7 +166,7 @@ anyNA(wine_data)
 ```
 There are no missing values in the data.
 
-Plot each variable against "quality" in a matrix to visualize the data.
+Plot each variable against "quality" in a matrix to visualize the data. The code below was written using the pipe function `%>%` from (Dplyr)[https://dplyr.tidyverse.org] and is especially useful for writing clean looking code.  
 ``` r
 wine_data %>%
   gather(-quality, key = "variables", value = "value") %>%
@@ -206,7 +208,7 @@ unique(wine_data$quality)
     [1] 6 5 7 8 4
 ```
 
-Support Vector Machines assume the data is within a standard range of 0 to 1. Therefore, SVMs require data to be normalized prior to training the model. The custom function below normalizes data
+Support Vector Machines assume the data is within a standard range of 0 to 1. Therefore, SVMs require data to be normalized prior to training the model. The custom function below normalizes data. 
 ``` r
 # Function to normalize the data
 normalize <- function(x) {
@@ -264,7 +266,7 @@ test_norm <- wine_data_norm[ss==3,]
 
 ## Step 3: Train the SVM model
 
-Start with a simple linear SVM (Support Vector Model). 
+Start with a simple linear SVM. 
 ``` r
 # Begin training with a simple linear SVM
 quality_classifier <- ksvm(quality ~., 
@@ -382,7 +384,7 @@ print(RBF_classifier)
      Number of Support Vectors:  3329
 ```
 
-Apply the SVM model to the normalized validation dataset to check the accuracy of the model.
+Apply the new SVM model to the normalized validation dataset to check the accuracy of the model.
 ``` r
 # Normalized validation dataset predictions
 pred_validation <- predict(RBF_classifier, validation_norm)
@@ -578,7 +580,7 @@ ggplot(data = confusion_matrix,
 ```
 {% include gallery id="gallery6" caption="The polynomial SVM model with optimized parameters results in 55.6% accuracy, a decrease of 4.6% from the optimized RBF SVM model" %}
 
-To experiment further with one last SVM model, Sigmoid Kernel SVM, and fine tune the parameters.
+To experiment further with one last SVM model, we'll use the Sigmoid Kernel SVM, and fine tune the parameters as well.
 ``` r
 # Obtain the best parameters for polynomial type kernel for the SVM model
 sigmoid_tune <- tune.svm(x = train_norm[, -typeColNum],
@@ -643,11 +645,11 @@ ggplot(data = confusion_matrix,
 ```
 {% include gallery id="gallery7" caption="The sigmoid SVM model with optimized parameters results in 45.7% accuracy, a substantial decrease of 15.5% from the optimized RBF SVM model" %}
 
-Out of the three optimized models, the optimized RBF model resulted in the highest accuracy at 61.2%. However, with the accuracy maxing out just above 60%, it is clear that neither of the SVM models are the best classification method for this project or the data is simply too "noisy" and "non-informative". This can be seen in the data visualization that plots each feature (variable) against quality. None of the features show any clear correlation regarding quality. In this case, either more or different features should be used to classify wine quality.
+Out of the three optimized models, the optimized RBF model resulted in the highest accuracy at 61.2%. However, with the accuracy maxing out just above 60%, it is clear that SVM models are either not the best classification method for this project or the data is simply too "noisy" and "non-informative". 
 
 ## Step 5: Apply the best performing model to the test dataset
 
-Using the optimized parameters for cost, gamma, and epsilon obtained from the tune.svm function, apply the model to the test dataset.
+Although neither of the models performed well, we will finish the project by applying the best model discovered. Using the optimized parameters for cost, gamma, and epsilon obtained from the tune.svm function, we will apply the RBF Kernel model to the test dataset.
 ``` r
 # Testdataset predictions
 pred_test <- predict(tuned_RBF_classifier, test_norm)
@@ -738,4 +740,6 @@ ggplot(data = confusion_matrix,
 {% include gallery id="gallery8" caption="The final result is 61.1% accuracy" %}
 
 ## Conclusion: 
-Upon examining the visualization of the confusion matrix, it is clear that model excelled only at classifying wines with a quality of 6 with an accuracy rate of 75.4% despite having removed quality three and nine wines. The model struggles to classify all other qualities of wine with all others having an accuracy rate below 63%. As mentioned before, this could be most likely due to the data being non-informative on top of the fact that most observations are quality six and seven wines.
+Upon examining the visualization of the confusion matrix, it is clear that model excelled only at classifying wines with a quality of 6 with an accuracy rate of 75.4% despite having removed quality three and nine wines. The model struggles to classify all other qualities of wine with all others having an accuracy rate below 63%. Based on prior experience working with classification datasets, the problem appears to stem with the data either being too noisy, non-informative, or a combination of both. It is likely that the physiochemical properties of the various wines provide no insight into the quality of the wine. Another problem that arises with the dataset is there is no clear scientific methodology for classifying and rating the qualities of the wines. This information is crucial as there is no way to verify the reasons behind each rating and whether the reasons remain consistent with each wine. Moving forward with this project would require information on how the rating system works and possibly introducing further data such as the what grapes were used, the age of the wine, and how the wine was distilled and stored.
+
+Regardless of the results, this was a fun project that demonstrates how widely applicable data science and machine learning is. Careful not to get too drunk on data and information though! 
