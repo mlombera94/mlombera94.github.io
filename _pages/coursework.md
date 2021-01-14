@@ -22,8 +22,8 @@ toc_sticky: true
 - ***STAT 6205 - Statistical Theory:*** Maximum likelihood and least squares estimation, applications to one-sample, two-sample and regression problems, hypothesis testing, confidence intervals, significance level, bias, precision.
 - ***STAT 6204 - Probability Theory:*** Theory of probability. Random variables; joint, marginal, conditional distributions; important distributions (binomial, Poisson, normal, etc.); moments; moment generating functions. Multivariate distributions. Inequalities; limit theorems. Multidimensional transformations; derivation of random variables.
 <p>&nbsp;</p>
-<p>&nbsp;</p>
-# **University of California, Santa Cruz**  |  2012 - 2016  |  B.S. Mathematics & Economics**
+
+# **University of California, Santa Cruz**  |  2012 - 2016  |  B.S. Mathematics & Economics
 
 ## Mathematic Courses
 - ***MATH 105A - Real Analysis:*** The basic concepts of one-variable calculus are treated rigorously. Set theory, the real number system, numerical sequences and series, continuity, differentiation.
