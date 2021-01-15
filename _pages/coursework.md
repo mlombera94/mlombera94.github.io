@@ -8,7 +8,7 @@ toc_sticky: true
 ### **California State University, East Bay  | 2017 - 2019  | M.S. Statistics *(Data Science Concentration)***
 
 #### Data Science Courses
-- ***STAT 653 - Statistical Natural Language Processing:*** Statistical topics used for processing natural language. Text wrangling and cleaning. Creating a word list corpus. Text classification. Web scraping. Social media mining.
+- ***STAT 653 - Statistical Natural Language Processing:*** <sub><sup>Statistical topics used for processing natural language. Text wrangling and cleaning. Creating a word list corpus. Text classification. Web scraping. Social media mining.</sub></sup>
 - ***STAT 650 - Advanced R for Data Science:*** Professional R programming techniques. Data wrangling. R packages. Connections to databases. Use of R for reproducible research. Data Visualization. Use of R in cloud computing. Topics include applied statistics, data science, and statistical/machine learning. 
 - ***STAT 641 - Bootstrapping Methods:*** Implementation of computationally-advanced statistical methods. Use of modern computing software (e.g. R, Python, SAS).  Topics include: bootstrap, Monte Carlo, and applied statistics. 
 - ***STAT 6620 - Statistical Learning with R:*** Introduction to machine learning, including supervised learning such as regression, logistic regression and classification methods. Re-sampling methods such as cross-validation and bootstrap. Unsupervised learning. Applications to data mining, statistical pattern recognition, and data processing.
