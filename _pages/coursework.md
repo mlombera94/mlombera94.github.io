@@ -49,6 +49,6 @@ toc_sticky: true
 <p>&nbsp;</p>
 
 # **Online Courses**
-- ***(The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert)[https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/]***
-  - (Certificate of Completetion)[/images/certificates/MySQL_certificate.pdf]
+- ***[The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert](https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/)***
+  - [Certificate of Completetion](/images/certificates/MySQL_certificate.pdf)
 
