@@ -5,6 +5,7 @@ toc: true
 toc_sticky: true
 ---
 
+![no-alignment]({{ site.url }}{{ site.baseurl }}/images/csu_eastbay_logo.png)
 ### **California State University, East Bay  | 2017 - 2019  | M.S. Statistics *(Data Science Concentration)***
 
 #### Data Science Courses
