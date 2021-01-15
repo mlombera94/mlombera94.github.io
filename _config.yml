@@ -106,7 +106,7 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/mlombera94/"
     - label: "Resume"
-      icon: "fa fa-fw fa-file-pdf-o"
+      icon: "fas fa-fw fa-file-pdf-o"
       url: "/images/Resume_2021.pdf"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
