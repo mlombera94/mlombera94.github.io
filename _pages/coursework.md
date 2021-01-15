@@ -23,6 +23,7 @@ toc_sticky: true
 - ***STAT 6204 - Probability Theory:*** Theory of probability. Random variables; joint, marginal, conditional distributions; important distributions (binomial, Poisson, normal, etc.); moments; moment generating functions. Multivariate distributions. Inequalities; limit theorems. Multidimensional transformations; derivation of random variables.
 <p>&nbsp;</p>
 
+![no-alignment]({{ site.url }}{{ site.baseurl }}/images/santa-cruz-logo.png)
 ### **University of California, Santa Cruz**  |  2012 - 2016  |  B.S. Mathematics & Economics
 
 #### Mathematic Courses
