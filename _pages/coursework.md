@@ -46,3 +46,9 @@ toc_sticky: true
 - ***ECON 113 - Intro to Econometrics:*** Practical methods for organizing and analyzing economic data, testing economic hypotheses, and measuring economic relationships. Regression analysis is the main empirical method, and basic statistical and probability theory is included.
 - ***ECON 100B - Intermediate Macroeconomics:*** Covers major theoretical issues arising in the study of income, employment, interest rates, and the price level. Examines the role of monetary and fiscal policy in economic stabilization. Also considers these issues as they relate to the global economy.
 - ***ECON 100A - Intermediate Microeconomics:*** Covers major theoretical issues arising in the study of resource allocation, the function of markets, consumer behavior, and the determination of price, output, and profits in competitive, monopolistic, and oligopolistic market structures. Also considers issues of welfare and public policy.
+<p>&nbsp;</p>
+
+# **Online Courses**
+- ***(The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert)[https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/]***
+  - (Certificate of Completetion)[/images/certificates/MySQL_certificate.pdf]
+
