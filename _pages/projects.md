@@ -1,6 +1,6 @@
 ---
 title: Projects
-permalink: _pages/projects/
+permalink: /_pages/projects/
 toc: true
 toc_sticky: true
 gallery: 
