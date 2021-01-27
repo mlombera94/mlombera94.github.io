@@ -15,6 +15,10 @@ gallery2:
     image_path: /images/project/no_data_no_problem/successful_mysql.png
     alt: "placeholder image 1"
     title: "Successful MySQL Query"
+  - url: /images/project/no_data_no_problem/successful_mysql2.png 
+    image_path: /images/project/no_data_no_problem/successful_mysql2.png
+    alt: "placeholder image 1"
+    title: "Successful MySQL Query"
 ---
 
 ## Introduction: 
@@ -51,7 +55,7 @@ var conn = db.createConnection({
   host: "localhost",
   user: "root",
   password: "password",
-  database: "databasename"
+  database: "database_name"
 });
 
 conn.connect(function(err) {
@@ -66,7 +70,7 @@ Once the code has been copied/pasted and the MySQL server credentials have been 
 ```bash
 node app.js
 ```
-Your terminal should say 'Connected!" once a connection has been established. 
+Your terminal should say 'Connected!' once a connection has been established. 
 
 ### Troubleshooting
 It's possible you may recieve the following error message if you have the latest MySQL server install. 
@@ -160,7 +164,7 @@ var conn = db.createConnection({
   host: "localhost",
   user: "root",
   password: "password",
-  database: "udemy"
+  database: "database_name"
 });
 
 var data = [];
@@ -194,10 +198,10 @@ node app.js
 ```
 ## Successful Insertion
 You should see something similar if your mock data insertion was successful. 
-{% include gallery id="gallery" caption="Successful Mock Data Insertion" %}
+{% include gallery id="gallery" caption="* Note the node.js filename used is different" %}
  
 Just to double check our data insertion was successful, let's query data from the users table. 
-{% include gallery id="gallery2" caption="Successful SQL Query" %}
+{% include gallery id="gallery2" caption="MySQL Queries" %}
  
 ## Conclusion
 Using Node.js, we learned how to quickly set up a connection between node.js and our MySQL server. Once connected, we used the faker.js and mysql.js packages to create mock data and insert realistic data into a table within our database. The possibilities are endless as faker.js provies various functions to create different types of mock data including account numbers, addresses, credit card numbers and much more! 
