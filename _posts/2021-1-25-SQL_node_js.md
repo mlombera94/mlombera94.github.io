@@ -14,11 +14,11 @@ gallery2:
   - url: /images/project/no_data_no_problem/successful_mysql.png 
     image_path: /images/project/no_data_no_problem/successful_mysql.png
     alt: "placeholder image 1"
-    title: "Successful MySQL Query"
+    title: "Successfully Added Mock Data"
   - url: /images/project/no_data_no_problem/successful_mysql2.png 
     image_path: /images/project/no_data_no_problem/successful_mysql2.png
     alt: "placeholder image 1"
-    title: "Successful MySQL Query"
+    title: "Successful Added All 500 Entries"
 ---
 
 ## Introduction: 
