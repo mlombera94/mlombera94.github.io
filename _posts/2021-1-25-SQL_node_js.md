@@ -23,7 +23,7 @@ gallery2:
 
 ## Introduction: 
 
-Interested in generating mock data to work with in your MySQL database? What if you could generate thousands of entries of realistic mock data including names, email addresses, street addresses, business occupations, phone numbers and much more? With the help of Node.js package, [faker.js](https://www.npmjs.com/package/faker), realistic data can be generated with a few lines of code and then inserted into your MySQL table(s). This post explains step by step how to get started by first connecting Node.js to MySQL. 
+Interested in generating mock data to work within your MySQL database? What if you could generate thousands of entries of realistic mock data including names, email addresses, street addresses, business occupations, phone numbers and much more? With the help of Node.js package, [faker.js](https://www.npmjs.com/package/faker), realistic data can be generated with a few lines of code and then inserted into your MySQL table(s). This post explains step by step how to get started by first connecting Node.js to MySQL. 
 
 ## Connect Node.js to MySQL
 
