@@ -21,6 +21,8 @@ gallery2:
     title: "Successful Added All 500 Entries"
 ---
 
+Generate realistic mock data for your MySQL database with Node.js. 
+
 ## Introduction: 
 
 Interested in generating mock data to work within your MySQL database? What if you could generate thousands of entries of realistic mock data including names, email addresses, street addresses, business occupations, phone numbers and much more? With the help of Node.js package, [faker.js](https://www.npmjs.com/package/faker), realistic data can be generated with a few lines of code and then inserted into your MySQL table(s). This post explains step by step how to get started by first connecting Node.js to MySQL. 
