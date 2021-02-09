@@ -52,6 +52,8 @@ gallery8:
 
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/mlombera94/Wine-Classification)
 
+Who says wine can't be paired with Machine Learning? 
+
 ## Summary: 
 
 Ever wondered what would happen if we combined machine learning and wine together? In this fun little project, we attempt to use support vector machines using R to classify the quality of various red and white Portuguese "Vinho Verde" wines on a scale of 1-10 (1 being the worst to 10 being the best) using only the physiochemical properties of the wines. The full project involved using both support vector machines and neural networks to compare the differences in performance. To view more the project in it's entirety, click on the github badge above. However, for the purposes of this post, we will focus primarily on how to deploy support vector machines. 
