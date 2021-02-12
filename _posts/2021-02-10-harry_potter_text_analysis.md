@@ -42,8 +42,7 @@ if (packageVersion("devtools") < 1.6) {
 devtools::install_github("bradleyboehmke/harrypotter", force = TRUE) # provides the first seven novels of the Harry Potter series
 ```
 
-### Load the other necessary packages for this project.
-The [tidyverse](https://tidyverse.tidyverse.org) package loads various useful packages! I highly recommend visiting their website as this package is essential for any R user.
+Load the other necessary packages for this project. The [tidyverse](https://tidyverse.tidyverse.org) package loads various useful packages! I highly recommend visiting their website as this package is essential for any R user.
 
 ```r
 # The following package will load the core tidyverse packages including:
