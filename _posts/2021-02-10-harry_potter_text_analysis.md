@@ -238,7 +238,7 @@ series %>%
     theme(legend.position="none") # Flip cartesian coordinates so horizontal becomes vertical vice versa.
 ```
 
-{% include gallery2 caption="The top words in each novel include the main characters, Harry, Hermione, and Ron but also include other characters such as Dumbledore and Hagrid" %}
+{% include gallery id="gallery2" caption="The top words in each novel include the main characters, Harry, Hermione, and Ron but also include other characters such as Dumbledore and Hagrid" %}
 
 Finally, generating word clouds is another useful way to visualize the frequency of words by novel.
 ```r
@@ -261,7 +261,7 @@ series %>%
     facet_wrap(~book)
 ```
 
-{% include gallery3 caption="Word cloud of the top words in each novel" %}
+{% include gallery id="gallery3" caption="Word cloud of the top words in each novel" %}
 
 ## Conclusion:
 
