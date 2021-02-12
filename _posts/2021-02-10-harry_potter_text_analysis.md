@@ -29,7 +29,7 @@ You don't need to be a wizard to start learning text analysis.
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/mlombera94/harry_potter_text_analysis_part1) [![View on R](https://img.shields.io/badge/R-View_on_R-276DC3?logo=R)](https://github.com/mlombera94/harry_potter_text_analysis_part1/blob/master/Text_analysis.Rmd)
 
 ## Introduction:
-In this week's post, we will be focusing on mining text data for analysis. This example uses J.K Rowling's widely known Harry Potter series and R software to mine the text. This post will demonstrate step by step how to get started   
+In this week's post, we will be focusing on mining text data for analysis. This example uses J.K Rowling's widely known Harry Potter series and R software to mine the text. This post will demonstrate step by step how to get started.   
 
 ## Step 1: Download the Harry Potter series.
 
@@ -100,6 +100,25 @@ for(i in seq_along(titles)) {
 
 # set factor to keep books in order of publication
 series$book <- factor(series$book, levels = titles)
+```
+
+Here is an example of how the tibble is structured once it is in a tidy format.
+```{r}
+series %>% head(10)
+
+    A tibble: 10 x 3
+    book                chapter word   
+    <fct>                 <int> <chr>  
+    1 Philosopher's Stone       1 the    
+    2 Philosopher's Stone       1 boy    
+    3 Philosopher's Stone       1 who    
+    4 Philosopher's Stone       1 lived  
+    5 Philosopher's Stone       1 mr     
+    6 Philosopher's Stone       1 and    
+    7 Philosopher's Stone       1 mrs    
+    8 Philosopher's Stone       1 dursley
+    9 Philosopher's Stone       1 of     
+    10 Philosopher's Stone      1 number
 ```
 
 ## Step 3: Text Analysis
