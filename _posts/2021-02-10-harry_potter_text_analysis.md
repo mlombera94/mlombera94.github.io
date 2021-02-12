@@ -26,7 +26,7 @@ gallery3:
 
 You don't need to be a wizard to start learning text analysis.
 
-[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/mlombera94/harry_potter_text_analysis_part1/blob/master/Text_analysis.md)
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/mlombera94/harry_potter_text_analysis_part1) [![View on R](https://img.shields.io/badge/R-View_on_R-276DC3?logo=R)](https://github.com/mlombera94/harry_potter_text_analysis_part1/blob/master/Text_analysis.Rmd)
 
 ## Introduction:
 In this week's post, we will be focusing on mining text data for analysis. This example uses J.K Rowling's widely known Harry Potter series and R software to mine the text. This post will demonstrate step by step how to get started   
