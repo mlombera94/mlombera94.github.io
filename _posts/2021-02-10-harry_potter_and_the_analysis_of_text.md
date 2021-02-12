@@ -18,7 +18,7 @@ gallery2:
     alt: "placeholder image 1"
     title: "Top 10 Most Frequent Words by Novel"
 gallery3:
-    - url: /images/project/harry_potter_text_part1/unnamed-chunk-10-1.png
+  - url: /images/project/harry_potter_text_part1/unnamed-chunk-10-1.png
     image_path: /images/project/harry_potter_text_part1/unnamed-chunk-10-1.png
     alt: "placeholder image 1"
     title: "Word Cloud for Top 10 Most Frequent Words by Novel"
