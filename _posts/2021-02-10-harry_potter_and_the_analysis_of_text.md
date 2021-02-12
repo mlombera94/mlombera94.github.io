@@ -43,7 +43,7 @@ devtools::install_github("bradleyboehmke/harrypotter", force = TRUE) # provides 
 ```
 
 ### Load the other necessary packages for this project.
-https://tidyverse.tidyverse.org
+The [tidyverse](https://tidyverse.tidyverse.org) package loads various useful packages! I highly recommend visiting their website as this package is essential for any R user.
 
 ```r
 # The following package will load the core tidyverse packages including:
@@ -63,7 +63,7 @@ library(scales) # provides additional data visualization functions
 
 Once all the necessary packages have been loaded, we can start preparing the text data for analysis. Textual data is often unstructured and is not suitable for even the simplest of analysis. Textual data should be formatted into a special type of data frame known as a tibble using the `unnest_token` function. This function splits the text into single words, strips all punctuation, and converts each word to lowercase for easy comparability.
 
-### Extract and format into a tidy text tibble.
+Extract and format into a tidy text tibble.
 
 ```r
 # store the title of each novel within a variable
