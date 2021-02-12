@@ -103,7 +103,7 @@ series$book <- factor(series$book, levels = titles)
 ```
 
 Here is an example of how the tibble is structured once it is in a tidy format.
-```{r}
+```r
 series %>% head(10)
 
     A tibble: 10 x 3
