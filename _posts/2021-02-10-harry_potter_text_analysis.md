@@ -229,14 +229,14 @@ series %>%
   group_by(book) %>%
   summarize(total_words = n()) %>%
   ungroup() %>%
-  ggplot(aes(book, total_words, fill = book)) +
+  ggplot(aes(book, total_words, fill = book)) + # use data from each novel for plot and distinguish novel by color
     geom_bar(stat = "identity") +
     coord_flip() +
     scale_y_continuous(name="Total Number of Words",
                        labels = comma,
-                       breaks = c(0, 50000, 100000, 150000, 200000, 250000, 300000)) +
-    scale_x_discrete(name = "Novels") +
-    theme(legend.position = "none")
+                       breaks = c(0, 50000, 100000, 150000, 200000, 250000, 300000)) + # manually set breaks
+    scale_x_discrete(name = "Novels") + # sets x axis
+    theme(legend.position = "none") # removes legend from plot
 ```
 {% include gallery caption="Order of the Pheonix is the longest novel while Philosopher's Stone is the shortest novel of the series" %}
 
@@ -248,12 +248,12 @@ series %>%
   count(word, sort = TRUE) %>%
   top_n(10) %>%
   ungroup() %>%
-  ggplot(aes(word, n, fill = book)) + # use data from each novel for plot
+  ggplot(aes(word, n, fill = book)) + # use data from each novel for plot and distinguish novel by color
     geom_bar(stat = "identity") +
     facet_wrap(~ book, scales = "free_y") + # separates plots by novel, "free_y" shares scales across the y-axis
     labs(x = "", y = "Frequency") + # set x and y-axis labels
-    coord_flip() +
-    theme(legend.position="none") # Flip cartesian coordinates so horizontal becomes vertical vice versa.
+    coord_flip() + # Flip cartesian coordinates so horizontal becomes vertical vice versa.
+    theme(legend.position="none") 
 ```
 
 {% include gallery id="gallery2" caption="The top words in each novel include the main characters, Harry, Hermione, and Ron but also include other characters such as Dumbledore and Hagrid" %}
@@ -274,9 +274,9 @@ series %>%
     )) +
     geom_text_wordcloud_area(area_corr = TRUE,
         eccentricity = 2) +
-    scale_size_area(max_size = 7.5) +
+    scale_size_area(max_size = 7.5) + # scales the size of the word clouds
     theme_minimal() +
-    facet_wrap(~book)
+    facet_wrap(~book) # seperates plots by novel
 ```
 
 {% include gallery id="gallery3" caption="Word cloud of the top words in each novel" %}
