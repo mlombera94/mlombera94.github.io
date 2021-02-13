@@ -107,8 +107,8 @@ Here is an example of how the tibble is structured once it is in a tidy format.
 series %>% head(10)
 
     A tibble: 10 x 3
-    book                chapter word   
-    <fct>                 <int> <chr>  
+      book                chapter word   
+      <fct>                 <int> <chr>  
     1 Philosopher's Stone       1 the    
     2 Philosopher's Stone       1 boy    
     3 Philosopher's Stone       1 who    
@@ -132,8 +132,8 @@ series %>%
   summarize(total_words = n()) # adds all row observations
 
   A tibble: 7 x 2
-  book                 total_words
-  <fct>                      <int>
+    book                 total_words
+    <fct>                      <int>
   1 Philosopher's Stone        77875
   2 Chamber of Secrets         85401
   3 Prisoner of Azkaban       105275
