@@ -204,8 +204,8 @@ series %>%
 
   A tibble: 21 x 3
   Groups:   book [7]
-      book                word     total_count
-      <fct>               <chr>          <int>
+    book                word     total_count
+    <fct>               <chr>          <int>
   1 Philosopher's Stone harry           1213
   2 Philosopher's Stone ron              410
   3 Philosopher's Stone hagrid           336
