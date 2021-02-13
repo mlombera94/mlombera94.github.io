@@ -146,7 +146,7 @@ series %>%
 Out of all seven novels, **Order of the Pheonix** is the longest novels with a total of 258,763 words, while **Philosopher's Stone** is the shortest with only 77,875 words.
 
 Next, we'll list the top ten most commonly used words within all seven novels.
-```r101
+```r
 series %>%
   count(word, sort = TRUE) %>%
   top_n(10) # limits output to top 10 results
