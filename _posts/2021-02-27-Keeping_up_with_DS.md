@@ -1,5 +1,5 @@
 ---
-title:  "Keeping up with the Data Science"
+title:  "Keeping up with Data Science"
 tags:
   - Data Science
   - Career
