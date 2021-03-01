@@ -6,7 +6,7 @@ tags:
   - Cloud Computing
   - AWS
 header: 
-  image: /images/background/blog_image1.eps
+  image: /images/background/blog_image1.jpg
 ---
 
 What's been keeping me busy these past few weeks?
