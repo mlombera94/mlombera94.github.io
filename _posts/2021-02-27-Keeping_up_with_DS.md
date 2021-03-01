@@ -1,5 +1,5 @@
 ---
-title:  "Keeping up with the Trends"
+title:  "Keeping up with the Data Science"
 tags:
   - Data Science
   - Career
@@ -7,7 +7,7 @@ tags:
   - AWS
 ---
 
-What's been keeping me busy these past few week?
+What's been keeping me busy these past few weeks?
 
 It's been an eventful past few weeks since I launched Through Data Lens blog. Aside from starting Through Data Lens, I also wanted to take the as opportunity to gain new data science skills. Data science is constantly evolving and as such, a data scientist's skills must continuously adapt as well. With this in mind, I decided to invest my time on learning a new skill that is currently popular and would most likely remain relevant for years to come. I settled on cloud computation, specifically, AWS (Amazon Web Services).
 
