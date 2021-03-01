@@ -5,6 +5,8 @@ tags:
   - Career
   - Cloud Computing
   - AWS
+header: 
+  image: /images/background/blog_image1.eps
 ---
 
 What's been keeping me busy these past few weeks?
